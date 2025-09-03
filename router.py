@@ -22,10 +22,10 @@ def alert_creation(metric_name:str,threshold:float,value:float):
     db.close()
     
 def metrics_insertion():
-    # print("check working or not")
+    print("check working or not")
     db = sessionLocal()
     boot_time = psutil.boot_time()
-    disk_usage =  psutil.disk_usage('/home/monkey-d-luffy/')
+    disk_usage =  psutil.disk_usage('/')
     memory  = psutil.virtual_memory()
     temps = psutil.sensors_temperatures()
     if temps:
